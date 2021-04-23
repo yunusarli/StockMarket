@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	padding: 70px 100px;
+}
+
+.stocks{
+	width: 30%;
+	height: auto;
+	text-align: left;
+	padding: 20px 40px;
+	background-color: rgb(221, 57, 186);
+	border-style: inset;
+	border: 2px solid gray;
+	border-radius: 20px;
+	margin-left: 100px;
+}
+.assets{
+	width: 30%;
+	height: auto;
+	text-align: left;
+	padding: 20px 40px;
+	background-color: rgb(221, 57, 186);
+	border-style: inset;
+	border: 2px solid gray;
+	border-radius: 20px;
+	margin-left: 300px;
+	color: white;
+	font-size: 20px;
+}
+.stocks .stock{
+	padding: 10px 20px;
+
+}
+.stocks .stock h3 a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	display: inline-block;
+	
+}
+
+.stocks .stock h3 a span{
+	font-size: 30px;
+	display: inline-block;
+	transition: transform .2s;
+	
+}
+.stocks .stock h3 a span:hover{
+	color: gray;
+	transform: scale(1.2);
+	transform: translate(5px);
+
+}
+.assets .name,.toplampara{
+	text-align: center !important;
+}
+.assets .name,.toplampara,.hisselerim{
+	width: 100%;
+	padding: 10px 20px;
+	text-align: left;
+}
+.hisselerim >div{
+	
+	padding: 10px 10px;
+}

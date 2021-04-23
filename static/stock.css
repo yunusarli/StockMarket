@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.information{
+    width: 100%;
+    padding: 20px 40px;
+    
+}
+.name{
+    width: 100%;
+    padding: 10px 20px;
+    color:  rgb(221, 57, 186);
+    font-size: 40px;
+    text-align: center;
+}
+
+.description{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.prices{
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.price{
+    padding: 10px 20px;
+    width: 20%;
+}
+.last{
+    width: 100% !important;
+    text-align: center !important;
+}
+.cost{
+    padding: 5px 10px;
+    text-align: center;
+    color: rgb(221, 57, 186);
+    font-size: 25px;
+}
+.info{
+    text-align:center;
+    width:100%;
+    display:inline-block;
+    font-weight: bold;
+    color: gray;
+}
+.operation{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 80px;
+}
+.al,.sat{
+    width: 50%;
+    padding: 25px 50px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.al{
+    background: green;
+}
+.sat{
+    background: red;
+}
+.al:hover{
+    background-color: rgb(221, 57, 186);
+}
+.sat:hover{
+    background-color: rgb(221, 57, 186);
+}
+
+.buy{
+    width: 100%;
+    padding: 20px 40px;
+    padding-top: 0 !important;
+    text-align: center;
+    display: none;
+    
+}
+.buy span{
+    width: 100px;
+    font-size: 50px;
+}
+.buy form{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+
+.buy form > .input-group{
+    width: 100%;
+    padding: 15px;
+    text-align: right;
+}
+.stock_name_to_buy,.piece_to_buy,.submit_to_buy{
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    font-family: sans-serif;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 0 !important;
+    border-color: green;
+}
+.submit_to_buy{
+    background-color: green;
+    color: white;
+}
+
+.sell{
+    width: 100%;
+    padding: 20px 40px;
+    padding-top: 0 !important;
+    text-align: center;
+    display: none;
+    transition: all .5s;
+}
+.sell span{
+    width: 100px;
+    font-size: 50px;
+}
+.sell form{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+
+.sell form > .input-group{
+    width: 100%;
+    padding: 15px;
+    text-align: right;
+}
+.stock_name_to_sell,.piece_to_sell,.submit_to_sell{
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    font-family: sans-serif;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 0 !important;
+    border-color: red;
+}
+.submit_to_sell{
+    background-color: red;
+    color: white;
+}
+.submit_to_buy:hover,.submit_to_sell:hover{
+    cursor: pointer;
+    background-color: rgb(221, 57, 186);
+    border-color: rgb(221, 57, 186);
+}

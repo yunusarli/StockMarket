@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Sign Up{% endblock%}
+{% block style %}
+    <link rel="stylesheet" href="/static/style.css">
+{% endblock %}
+
+{% block content%}
+     <div class="content">
+        <div class="welcome">WELCOME</div>
+        <div class="logo">A</div>
+        <form action="/succes" method="POST">
+            <div class="input-group">
+                <input type="email" name="Eemail" placeholder="E-mail" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="Epassword" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <input type="submit" value="Sign up">
+            </div>
+        </form>
+        <a href="http://127.0.0.1:5000/signin" class="link">Zaten hesabın var mı?<em>Giriş yap</em></a>
+    </div>
+{% endblock %}

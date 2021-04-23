@@ -1,0 +1,139 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ stock[0] }}{% endblock%}
+{% block style %} <link rel="stylesheet" href="/static/stock.css"> {% endblock %}
+{% block content%}
+    <div class="information">
+        <div class="name">
+            <div> {{ stock[0] }} ( {{name}} ) </div>
+        </div>
+        
+        <div class="description">
+            <span style="text-align: left; padding:5px 10px; font-size:20px;"> <b>DESCRİPTİON: </b> </span>
+            <div> {{ stock[1] }} </div>
+        </div>
+        <div class="prices">
+            <div class="price">
+                <span class="info">
+                    Instant price
+                </span>
+                <div class="cost"> {{ stock[2] }} </div>
+            </div>
+            
+            <div class="price">
+                <span class="info">
+                    Starting price
+                </span>
+                <div class="cost"> {{ stock[3] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Highest of the day
+                </span>
+                <div class="cost"> {{ stock[4] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Lowest of the day
+                </span>
+                <div class="cost"> {{ stock[5] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Previous close
+                </span>
+                <div class="cost"> {{ stock[6] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Fifty day average
+                </span>
+                <div class="cost"> {{ stock[7] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Two hundred day average
+                </span>
+                <div class="cost"> {{ stock[8] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    52 week highest
+                </span>
+                <div class="cost"> {{ stock[9] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    52 week lowest
+                </span>
+                <div class="cost"> {{ stock[10] }} </div>
+            </div>
+
+            <div class="price">
+                <span class="info">
+                    Daily volume
+                </span>
+                <div class="cost"> {{ stock[11] }} </div>
+            </div>
+
+            <div class="price last">
+                <span class="info">
+                    10 day volume
+                </span>
+                <div class="cost"> {{ stock[12] }} </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="operation">
+        <div class="al">AL</div>
+        <div class="sat">SAT</div>
+    </div>
+
+    <div class="buy">
+        <span>&#8595;</span>
+        <form action="/home/buy" method="POST">
+            <div class="input-group">
+                <input type="text" name="stock_name_to_buy" class="stock_name_to_buy" placeholder={{name}} required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="piece_to_buy" class="piece_to_buy" placeholder={{piece}} required>
+            </div>
+            
+            <div class="input-group">
+                <input type="submit" class="submit_to_buy" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+
+    <div class="sell">
+        <span>&#8595;</span>
+        <form action="/home/sell" method="POST">
+            <div class="input-group">
+                <input type="text" name="stock_name_to_sell" class="stock_name_to_sell" placeholder={{name}} required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="piece_to_sell" class="piece_to_sell" placeholder={{piece}} required>
+            </div>
+            
+            <div class="input-group">
+                <input type="submit" class="submit_to_sell" value="Submit">
+            </div>
+
+        </form>
+    </div>
+    <script src="/static/script.js"></script>
+{% endblock %}

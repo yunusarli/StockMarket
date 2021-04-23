@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock%}
+{% block style %} <link rel="stylesheet" href="/static/home.css"> {% endblock %}
+{% block content%}
+    <div class="container">
+        <div class="stocks">
+            {% for stock in stocks_names %}
+                <div class="stock">
+                    <h3> <a href="http://127.0.0.1:5000/home/{{ stock }}"> {{ stock }} <span> &#187; </span></a></h3>
+                    <hr/>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="assets">
+            <div class="name">{{ name }}</div>
+            <div class="toplampara">{{budget}}</div>
+            <div class="hisselerim">
+                <span>My Stocks</span>
+                <hr>
+                {% if stock_list %}
+                    {% for stocks in stock_list %}
+                        <div class="apple"> {{stocks[0]}} <span style="margin-left:100px;">piece: {{stocks[1]}} </span></div>
+                    {% endfor %}
+                {% else %}
+                    <div class="apple"> You dont't have any stocks </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
