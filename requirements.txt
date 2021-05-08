@@ -1,0 +1,5 @@
+REQUIREMENTS:
+1-) Python 3+
+2-)Flask
+3-)yfinance package
+4-)Python sqlite3 database
